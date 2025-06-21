@@ -35,6 +35,9 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
     "vite": "^6.3.5",
-    "vite-plugin-pug": "^0.4.1"
+    "vite-plugin-checker": "^0.9.3",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-pug": "^0.4.1",
+    "vite-plugin-stylelint": "^6.0.0"
   }
 }

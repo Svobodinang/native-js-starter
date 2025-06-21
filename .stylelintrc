@@ -1,29 +1,33 @@
-extends: 
-  - stylelint-config-standard-scss
-  - stylelint-prettier
+extends:
+    - stylelint-config-standard
+    - stylelint-config-standard-scss
+    - stylelint-prettier/recommended
 plugins:
-  - stylelint-order
-  - stylelint-prettier
+    - stylelint-order
+    - stylelint-scss
+'ignoreFiles':
+    - 'dist/**/*'
+    - 'node_modules/**/*'
 rules:
-  prettier/prettier: true
-  selector-pseudo-element-no-unknown: null
-  no-duplicate-selectors: true
-  selector-attribute-quotes: always
-  declaration-no-important: true
-  function-url-quotes: always
-  font-weight-notation:
-    - numeric
-    - ignore:
-        - relative
-  comment-whitespace-inside: always
-  comment-empty-line-before: always
-  rule-empty-line-before: always-multi-line
-  selector-pseudo-element-colon-notation: double
-  selector-no-vendor-prefix: null
-  property-no-vendor-prefix: null
-  value-keyword-case: lower
-  scss/dollar-variable-pattern: "^[_a-z]+([a-z0-9-]+)*$"
-  order/order:
-    - dollar-variables
-    - custom-properties
-    - declarations
+    prettier/prettier: true
+    selector-pseudo-element-no-unknown: null
+    no-duplicate-selectors: true
+    selector-attribute-quotes: always
+    declaration-no-important: true
+    function-url-quotes: always
+    font-weight-notation:
+        - numeric
+        - ignore:
+              - relative
+    comment-whitespace-inside: always
+    comment-empty-line-before: always
+    rule-empty-line-before: always-multi-line
+    selector-pseudo-element-colon-notation: double
+    selector-no-vendor-prefix: null
+    property-no-vendor-prefix: null
+    value-keyword-case: lower
+    scss/dollar-variable-pattern: '^[_a-z]+([a-z0-9-]+)*$'
+    order/order:
+        - dollar-variables
+        - custom-properties
+        - declarations

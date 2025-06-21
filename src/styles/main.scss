@@ -1,8 +1,9 @@
-.main {
-    $var: 40px;
+@use './base/reset';
+@use './utils/reduced-motion';
+@use './tokens/sizes' as *;
+@use './utils/poly-fluid-sizing/index.scss' as *;
 
-    --var: 40px;
-
-    display: block;
-    width: 10%;
+html,
+body {
+    @include poly-fluid-sizing('font-size', $font-size-map);
 }
