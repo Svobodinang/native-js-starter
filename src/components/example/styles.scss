@@ -1,0 +1,24 @@
+.example {
+    $fs: 100;
+
+    width: vw(1440);
+    height: vh(1024);
+    background-color: rgb(var(--black-rgb), 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: rem(100);
+    font-size: vw($fs);
+    padding-top: rem(100);
+
+    &__title {
+        font-size: 1em;
+    }
+
+    &__rect {
+        width: em(1000, $fs);
+        height: em(1000, $fs);
+        background-color: var(--white);
+    }
+}

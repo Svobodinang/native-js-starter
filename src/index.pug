@@ -1,5 +1,6 @@
 block header
     include ./components/meta.pug
     script(type='module', src='../main.ts') 
+    include ./components/example/index.pug
 block body
-    h1 main
+    +example('example title')

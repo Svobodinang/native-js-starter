@@ -1,9 +1,18 @@
 @use './base/reset';
 @use './utils/reduced-motion';
-@use './tokens/sizes' as *;
 @use './utils/poly-fluid-sizing/index.scss' as *;
+@use './shared.scss' as *;
 
 html,
 body {
+    color: var(--black);
+    background-color: var(--white);
+
     @include poly-fluid-sizing('font-size', $font-size-map);
+    @include body-text;
+}
+
+h1,
+.h1 {
+    @include h1;
 }

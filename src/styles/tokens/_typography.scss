@@ -1,0 +1,20 @@
+@use './font-faces' as *;
+@use './sizes' as *;
+@use '../utils/functions' as *;
+
+$ff-default: 'Mulish', sans-serif;
+$ff-title: 'Mulish', sans-serif;
+
+@mixin body-text {
+    font-family: $ff-default;
+    font-size: rem(#{$base-font-size});
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+@mixin h1 {
+    font-family: $ff-title;
+    font-size: rem(32);
+    line-height: 1;
+    font-weight: 400;
+}

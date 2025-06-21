@@ -1,3 +1,4 @@
 import './styles/main.scss';
 
-console.log('ghjhgjhgj');
+// components
+import './components/example/styles.scss';

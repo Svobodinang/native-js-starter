@@ -1,6 +1,8 @@
-@use 'sass:color';
 @use '../utils/hex-to-rgb' as *;
 
+/// @example
+///   color: var(--black);
+///   background-color: rgba(var(--white-rgb), 0.5);
 $colors: (
     'black': #000,
     'white': #fff,

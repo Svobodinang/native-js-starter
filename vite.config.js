@@ -11,13 +11,11 @@ import meta from './src/config/meta.config';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-
-
 export default defineConfig({
-    base: "./",
-    root: "./src",
+    base: './',
+    root: './src',
     plugins: [
-        pugPlugin({}, { meta, baseUrl: "/pages" }),
+        pugPlugin({}, { meta, baseUrl: '/pages' }),
         eslint({
             cache: false,
             include: ['src/**/*.ts', 'src/**/*.js'],
@@ -30,10 +28,10 @@ export default defineConfig({
             exclude: ['node_modules', 'dist'],
             emitWarning: true,
             emitError: true,
-            failOnError: false
+            failOnError: false,
         }),
         {
-        name: 'remove-crossorigin',
+            name: 'remove-crossorigin',
             transformIndexHtml(html) {
                 return html.replace(/\s+crossorigin/g, '');
             },
@@ -49,9 +47,18 @@ export default defineConfig({
         emptyOutDir: true,
         rollupOptions: {
             input: {
-                main: "./src/index.html",
-                about: "./src/pages/about/index.html"
-            }
-        }
-    }
-})
+                main: './src/index.html',
+                about: './src/pages/about/index.html',
+            },
+        },
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `
+                    @use "@/styles/shared.scss" as *;
+                `,
+            },
+        },
+    },
+});
