@@ -3,7 +3,7 @@
 @use '../utils/functions' as *;
 
 $ff-default: 'Mulish', sans-serif;
-$ff-title: 'Mulish', sans-serif;
+$ff-title: $ff-default;
 
 @mixin body-text {
     font-family: $ff-default;
