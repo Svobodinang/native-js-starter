@@ -13,7 +13,6 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
     base: './',
-    root: './src',
     plugins: [
         pugPlugin({}, { meta, baseUrl: '/pages' }),
         eslint({
@@ -47,8 +46,8 @@ export default defineConfig({
         emptyOutDir: true,
         rollupOptions: {
             input: {
-                main: './src/index.html',
-                about: './src/pages/about/index.html',
+                main: './index.html',
+                about: './about.html',
             },
         },
     },

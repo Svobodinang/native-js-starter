@@ -1,8 +1,8 @@
 // styles
-import './styles/main.scss';
+import '@/styles/main.scss';
 
 // components
-import './components/example/styles.scss';
+import '@/components/example/styles.scss';
 
 // js
-import './utils/initViewportUnits';
+import '@/utils/initViewportUnits';
