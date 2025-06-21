@@ -21,13 +21,15 @@ rules:
               - relative
     comment-whitespace-inside: always
     comment-empty-line-before: always
-    rule-empty-line-before: always-multi-line
     selector-pseudo-element-colon-notation: double
     selector-no-vendor-prefix: null
     property-no-vendor-prefix: null
     value-keyword-case: lower
+    scss/dollar-variable-empty-line-before: null
     scss/dollar-variable-pattern: '^[_a-z]+([a-z0-9-]+)*$'
     order/order:
         - dollar-variables
         - custom-properties
         - declarations
+        - rules
+        - at-rules

@@ -7,11 +7,19 @@ $figma-height-desktop: 1024;
 $figma-width-mobile: 375;
 $figma-height-mobile: 667;
 
+// для адаптива
+$desktop-lg: 1920px;
+$desktop-md: 1512px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 600px;
+
 // Ключевые точки для основного шрифта
 $font-size-map: (
     $figma-width-mobile * 1px: $base-font-size * 1px,
-    560px: 12px,
-    850px: 14px,
+    $mobile: $base-font-size * 1px,
+    $tablet: 14px,
     $figma-width-desktop * 1px: $base-font-size * 1px,
-    1920px: 21px
+    $desktop-md: 18px,
+    $desktop-lg: 21px
 );

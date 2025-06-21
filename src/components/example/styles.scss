@@ -2,7 +2,6 @@
     $fs: 100;
 
     width: vw(1440);
-    height: vh(1024);
     background-color: rgb(var(--black-rgb), 0.2);
     display: flex;
     align-items: center;
@@ -16,9 +15,25 @@
         font-size: 1em;
     }
 
+    &__rects {
+        display: flex;
+        gap: em(20, $fs);
+
+        @include media-portrait-layout {
+            flex-direction: column;
+        }
+    }
+
     &__rect {
-        width: em(1000, $fs);
-        height: em(1000, $fs);
+        width: em(500, $fs);
+        height: em(500, $fs);
         background-color: var(--white);
+        transition: transform $default-transition;
+
+        @media (hover: hover) {
+            &:hover {
+                transform: translateY(-5%);
+            }
+        }
     }
 }

@@ -8,8 +8,12 @@ body {
     color: var(--black);
     background-color: var(--white);
 
-    @include poly-fluid-sizing('font-size', $font-size-map);
     @include body-text;
+    @include poly-fluid-sizing('font-size', $font-size-map);
+}
+
+.h-100 {
+    height: calc(var(--client-h-unit, 1vh) * 100);
 }
 
 h1,

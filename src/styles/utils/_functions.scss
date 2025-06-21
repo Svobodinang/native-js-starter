@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:list';
 @use '../tokens/sizes' as *;
 
 @function em($px, $inherited-px) {
@@ -10,7 +11,7 @@
 }
 
 @function rem($px) {
-    @return calc(#{math.div($px, $base-font-size)} * 1rem);
+    @return calc(#{list.slash($px, $base-font-size)} * 1rem);
 }
 
 @function vw($px, $mobile: false) {

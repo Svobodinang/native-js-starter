@@ -1,4 +1,7 @@
 mixin example(title)
-    .example
-        p.h1.example__title!= title
-        .example__rect
+    .example.h-100
+        p.h1!= `${title} rem`
+        p.h1.example__title!= `${title} vw`
+        .example__rects
+            .example__rect
+            .example__rect

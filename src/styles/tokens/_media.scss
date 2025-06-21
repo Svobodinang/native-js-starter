@@ -1,0 +1,7 @@
+@use './sizes' as *;
+
+@mixin media-portrait-layout {
+    @media (width < $mobile) or (height < $mobile) or ((width < $laptop) and (orientation: portrait)) {
+        @content;
+    }
+}
